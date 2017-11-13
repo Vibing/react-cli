@@ -1,0 +1,11 @@
+{
+  "presets": ["env", "react"],
+  "env": {
+      "production":{
+          "plugins":[
+            "minify-dead-code-elimination",
+            "transform-class-properties"
+          ]
+      }
+  }
+}

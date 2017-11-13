@@ -1,0 +1,20 @@
+# Include your project-specific ignores in this file
+
+#忽略上传的文件夹
+**/build/**
+**/lib/**
+**/dist/**
+**/.idea/**
+**/node_modules/**
+**/.vscode/**
+
+#忽略上传的文件
+**/yarn.lock
+**/.DS_Store
+**/ncp-debug.log
+**/npm-debug.log
+**/yarn-error.log
+**/server/template/config.json
+
+#IDE
+**/*.iml
