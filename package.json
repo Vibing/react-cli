@@ -1,17 +1,22 @@
 {
   "name": "react-cli",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "",
   "repository": "https://github.com/Vibing/react-cli.git",
-  "author": "of2600 <903254852@qq.com>",
+  "author": "alwaysVe",
   "license": "MIT",
+  "scripts": {
+    "dll": "rm -rf dll && ./node_modules/.bin/webpack --config webpack.dll.config.babel.js --progress --color",
+    "pro": "yarn && ./node_modules/.bin/webpack --config webpack.production.config.babel.js --progress --color",
+    "start": "./node_modules/.bin/webpack-dev-server"
+  },
   "devDependencies": {
     "@types/classnames": "^2.2.3",
     "@types/node": "^8.0.51",
     "@types/react": "^16.0.22",
     "@types/react-dom": "^16.0.3",
+    "add-asset-html-webpack-plugin": "^2.1.2",
     "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
     "babel-plugin-minify-dead-code-elimination": "^0.2.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -33,6 +38,9 @@
     "webpack-dev-server": "^2.9.4"
   },
   "dependencies": {
+    "antd": "^2.13.10",
+    "babel-loader": "6.4.1",
+    "immutable": "^3.8.2",
     "react": "^16.1.0",
     "react-dom": "^16.1.0",
     "react-router-dom": "^4.2.2",

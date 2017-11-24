@@ -2,6 +2,7 @@ import path from "path";
 import process from "process";
 import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import AddAssetHtmlPlugin from "add-asset-html-webpack-plugin";
 import ExtractTextPlugin from "extract-text-webpack-plugin";
 import tsImportPluginFactory from "ts-import-plugin";
 
@@ -14,13 +15,13 @@ export default {
     chunkFilename: "chunk-[name]-[hash:8].js"
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".less", ".json"],
+    extensions: [".tsx", ".ts",".js", ".less", ".json"],
     modules: ["node_modules", path.resolve(__dirname, "web_modules")]
   },
   module: {
     rules: [
       {
-        test: /\.(jsx|tsx|js|ts)$/,
+        test: /\.(tsx|ts)$/,
         loader: "ts-loader",
         options: {
           transpileOnly: true,
@@ -78,16 +79,20 @@ export default {
     }),
     new webpack.DllReferencePlugin({
       context: __dirname,
-      manifest: require("./static/vendor-manifest.json")
+      manifest: require(path.resolve(__dirname,'./dll/vendor-manifest'))
     }),
     new HtmlWebpackPlugin({
       env: "dev",
       title: "React Cli",
-      template: __dirname + "./index.ejs"
+      template: path.resolve(__dirname,"./index.ejs")
+    }),
+    new AddAssetHtmlPlugin({
+      filepath:path.resolve('./dll/vendor.dll.js'),
+      includeSourcemap:false
     })
   ],
   devServer: {
     host: "localhost",
-    port: 8080
+    port: 3000
   }
 };

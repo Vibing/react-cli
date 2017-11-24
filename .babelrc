@@ -1,11 +1,9 @@
 {
-  "presets": ["env", "react"],
+  "presets": ["env"],
+  "plugins": ["transform-runtime"],
   "env": {
-      "production":{
-          "plugins":[
-            "minify-dead-code-elimination",
-            "transform-class-properties"
-          ]
-      }
+    "production": {
+      "plugins": ["minify-dead-code-elimination", "transform-class-properties"]
+    }
   }
 }
