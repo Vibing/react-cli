@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import routes from './routes';
 import Decorator from './decorator';
-import Home from './apps/home';
 import AsyncRoute from '../common/async-loader';
 
 class App extends Component {
