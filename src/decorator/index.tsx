@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export default class Home extends Component {
-  state = {
-    collapsed: false
-  };
-
   render() {
     return (
       <div>
@@ -34,6 +30,7 @@ const Title = styled.div`
   color: #108ee9;
   padding: 20px;
 `;
+
 const Menu = styled.ul`
   list-style-type: none;
   text-align: center;
