@@ -1,7 +1,12 @@
 import 'antd/dist/antd.less';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import {
+  HashRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from 'react-router-dom';
 import routes from './routes';
 import Decorator from './decorator';
 import AsyncRoute from '../common/async-loader';

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
+import styled from 'styled-components';
+
 type TLoaderFn = () => Promise<any>;
 
 export default class AsyncRoute extends Component<any, any> {
@@ -29,13 +31,23 @@ class AsyncLoader extends React.Component<any, any> {
       });
     } catch (err) {
       this.setState({
-        Component: <div>抱歉，没有找到页面</div>
+        Component: <TipsWrap>抱歉，没有找到页面</TipsWrap>
       });
     }
   }
 
   render() {
     const { Component } = this.state;
-    return Component ? <Component {...this.props} /> : <div>页面加载中...</div>;
+    return Component ? (
+      <Component {...this.props} />
+    ) : (
+      <TipsWrap>页面加载中...</TipsWrap>
+    );
   }
 }
+
+const TipsWrap = styled.div`
+  text-align: center;
+  font-size: 14px;
+  color: '#ccc';
+`;

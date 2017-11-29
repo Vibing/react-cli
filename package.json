@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dll": "rm -rf dll && ./node_modules/.bin/webpack --config webpack.dll.config.babel.js --progress --color",
-    "pro": "yarn && ./node_modules/.bin/webpack --config webpack.production.config.babel.js --progress --color",
+    "build": "yarn && rm -rf dist && ./node_modules/.bin/webpack --config webpack.production.config.babel.js --progress --color",
     "start": "./node_modules/.bin/webpack-dev-server"
   },
   "devDependencies": {
@@ -21,7 +21,6 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^2.30.1",
@@ -33,6 +32,7 @@
     "ts-import-plugin": "^1.4.2",
     "ts-loader": "^3.1.1",
     "typescript": "^2.6.1",
+    "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.6.2",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.4"
