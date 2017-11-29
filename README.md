@@ -1,12 +1,31 @@
-### React Cli
+### react-create-fast
 
-##### 推荐使用技术栈：
+一个让你快速搭建`react`开发环境的脚手架
+
+##### 安装及使用：
+
+1. `npm install react-create-fast -g`
+2. `react-create-fast [projectName]`
+
+##### 启动项目：
+
+1. `cd [projectName]`
+2. `yarn` 或 `npm install`
+3. `npm run dll`
+4. `npm start`
+
+在浏览器地址栏中输入：`localhost:3000`即可访问
+
+项目打包，运行`npm run build`即可，项目将打包至`dist`文件夹内
+
+##### 默认使用技术栈：
 
 1. `react`
 2. `typescript`
 3. `antd`
 4. `styled-components`
 5. `react-router-dom`
+6. `immutable`
 
 你可以根据喜好来`install`或`uninstall`它们。
 
@@ -19,14 +38,14 @@
 
 ---
 
-##### 使用
+##### DLL ：
 
-1. `git clone https://github.com/Vibing/react-cli.git`
-2. `cd react-cli`
-3. `yarn`
-4. `npm run dll`
-5. `npm start`
+在`webpack.dll.config.babel.js`中，默认打包的公共包包括：
 
-将项目打包，运行`npm run build`即可，项目将打包至`dist`文件夹内
+```
+entry: {
+    vendor: ['react', 'react-dom', 'antd', 'react-router-dom', 'immutable']
+  }
+```
 
-在浏览器地址栏中输入：`localhost:3000`即可访问
+你可以根据自己的喜好做删减

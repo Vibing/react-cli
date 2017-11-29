@@ -1,11 +1,15 @@
+#!/usr/bin/env node
+
 var fs = require('fs');
 var path = require('path');
 var pg = require('../package');
 var argv = require('yargs').argv;
 
+var pname = 'react-create-fast';
+
 if (argv._[0] === undefined) {
   console.log('你需要添加一个项目名称');
-  console.log('你应该执行: react-fast [projectName]');
+  console.log(`你应该执行: ${pname} [projectName]`);
   return;
 }
 
