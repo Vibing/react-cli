@@ -15,7 +15,8 @@
     "url": "https://github.com/Vibing/react-cli/issues"
   },
   "bin": {
-    "react-create-fast": "./bin/index.js"
+    "react-create-fast": "./bin/index.js",
+    "simple-react-cli": "./bin/cli.js"
   },
   "homepage": "https://github.com/Vibing/react-cli#readme",
   "keywords": [
@@ -27,5 +28,14 @@
   ],
   "dependencies": {
     "yargs": "^10.0.3"
+  },
+  "devDependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.15.1",
+    "download-git-repo": "^1.0.2",
+    "handlebars": "^4.0.11",
+    "inquirer": "^6.0.0",
+    "log-symbols": "^2.2.0",
+    "ora": "^2.1.0"
   }
 }
