@@ -16,7 +16,7 @@
   },
   "bin": {
     "react-create-fast": "./bin/index.js",
-    "simple-react-cli": "./bin/cli.js"
+    "react-build": "./bin/cli.js"
   },
   "homepage": "https://github.com/Vibing/react-cli#readme",
   "keywords": [
