@@ -1,15 +1,10 @@
 import 'antd/dist/antd.less';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import {
-  HashRouter as Router,
-  Route,
-  Switch,
-  Redirect
-} from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import routes from './routes';
 import Decorator from './decorator';
-import AsyncRoute from '../common/async-loader';
+import loadable from 'async-loadable';
 
 class App extends Component {
   render() {
@@ -23,7 +18,13 @@ class App extends Component {
   }
 
   renderRoute = () => {
-    return routes.map((item, i) => <AsyncRoute {...item} />);
+    return routes.map((item, i) => (
+      <Route
+        exact
+        path={item.path}
+        component={loadable({ component: item.render })}
+      />
+    ));
   };
 }
 
