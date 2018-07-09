@@ -7,14 +7,14 @@ const chalk = require('chalk');
 const symbols = require('log-symbols');
 
 program
-  .version('0.1.10', '-v, --version')
+  .version('0.1.11', '-v, --version')
   .command('init <name>')
   .action(name => {
     if (!fs.existsSync(name)) {
       const spinner = ora('正在下载模板...');
       spinner.start();
       download(
-        'https://github.com:Vibing/react-cl#br-template-1.0',
+        'https://github.com:Vibing/react-cli#template',
         name,
         { clone: true },
         err => {

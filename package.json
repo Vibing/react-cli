@@ -1,6 +1,6 @@
 {
   "name": "react-ve",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "一个让你快速搭建`react`开发环境的脚手架",
   "main": "index.js",
   "bin": {
@@ -21,15 +21,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Vibing/react-cl.git"
+    "url": "git+https://github.com/Vibing/react-cli.git"
   },
   "keywords": [
+    "react",
     "react-cli"
   ],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Vibing/react-cl/issues"
+    "url": "https://github.com/Vibing/react-cli/issues"
   },
-  "homepage": "https://github.com/Vibing/react-cl#readme"
+  "homepage": "https://github.com/Vibing/react-cli#readme"
 }
