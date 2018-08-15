@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "antd": "^2.13.10",
+    "async-loadable": "^0.1.5",
     "babel-loader": "6.4.1",
     "immutable": "^3.8.2",
     "react": "^16.1.0",
